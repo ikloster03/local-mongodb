@@ -9,3 +9,14 @@ services:
       - ./data:/data/db
       - ./import:/data/import
     restart: always
+    networks:
+      - mongodb_network
+
+volumes:
+  mongodb-data:
+    driver: local
+    name: data
+
+networks:
+  mongodb_network:
+    external: true
