@@ -19,5 +19,6 @@ docker ps
 # 3. enter to mongo container bash 
 docker exec -it <container_name> bash
 # 4. run db restoring
-mongorestore data/import/<dump_folder>/
+mongodump <uri> -o=./dump
+mongorestore dump/
 ```
